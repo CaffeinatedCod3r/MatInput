@@ -1,0 +1,54 @@
+.MatInput-Wrapper {
+	--border-color: rgb(63, 81, 181);
+	position: relative;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+	background-image: linear-gradient(rgb(63, 81, 181), rgb(63, 81, 181));
+	background-size: 0% 1px;
+	background-repeat: no-repeat;
+	transition: background-size 0.3s ease-in-out;
+	background-position: 50% 100%;
+}
+
+.MatInput-Wrapper.active {
+	background-size: 100% 1px;
+	border-bottom: 1px solid rgb(63, 81, 181);
+}
+
+.MatInput-Wrapper .form-input {
+	border: none;
+	padding: 0;
+	background: transparent;
+}
+.MatInput-Wrapper .form-input:focus {
+	outline: none;
+	box-shadow: none;
+	border: none;
+	transform: scale3d(1, 1.0001, 1);
+}
+
+.MatInput-Wrapper .form-label {
+	position: absolute;
+	transition: transform 0.2s;
+	margin: 0.375rem 0;
+	color: rgb(128, 128, 128);
+}
+
+.MatInput-Wrapper .form-label--floating {
+	clip: auto;
+	clip-path: none;
+	transform: translateY(-50%);
+	margin: 0 0rem;
+	font-size: 12px;
+}
+
+.MatInput-Wrapper.active .form-label--floating {
+	color: rgb(63, 81, 181);
+}
+
+.MatInput-Wrapper.hasVal input::-webkit-datetime-edit {
+	color: inherit;
+}
+
+.MatInput-Wrapper input::-webkit-datetime-edit {
+	color: transparent;
+}
